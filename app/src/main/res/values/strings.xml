@@ -1,0 +1,99 @@
+<resources>
+    <string name="app_name">CBS Mobile</string>
+
+    <string name="create_account_hint_full_name">Full Name</string>
+    <string name="create_account_hint_mobile_number">Mobile Number</string>
+    <string name="create_account_hint_birth_date">Birth Date</string>
+    <string name="all_text_mpin">MPIN</string>
+    <string name="create_account_hint_confirm_mpin">Confirm MPIN</string>
+    <string name="create_account_hint_parent_name">Parent Name</string>
+    <string name="create_account_hint_nominee">Nominee</string>
+    <string name="create_account_hint_aadhaar_number">Aadhaar Number</string>
+    <string name="create_account_btn_create">Create Account</string>
+    <string name="create_account_title">Create an Account</string>
+
+    <string name="login_title">Sign in to account</string>
+    <string name="login_hint_customer_id">Customer ID</string>
+    <string name="all_text_login">Login</string>
+    <string name="login_need_account">Need an Account?</string>
+    <string name="login_create_account"><u>Create Account</u></string>
+
+    <string name="launch_title">Welcome to \nthe new\nCBS Bank</string>
+    <string name="launch_sub_title">New level of features with new app</string>
+    <string name="launch_btn_create_account">Create New Account</string>
+    <string name="all_text_available_balance">Available Balance</string>
+    <string name="all_text_zero">0</string>
+    <string name="deposit_fab_description">Deposit Money</string>
+    <string name="withdraw_fab_description">Withdraw Money</string>
+    <string name="error_empty_amount">Amount Cannot be Empty</string>
+    <string name="error_large_amount">Transaction greater than 50000 is not possible</string>
+    <string name="info_dialog_title">Information</string>
+    <string name="success_deposit">Successfully Deposited Your Funds</string>
+    <string name="error_dialog_title">Error</string>
+    <string name="err_less_mpin_length">MPin Must be Six Digits</string>
+    <string name="mpin_doesnt_match_confirm_mpin">MPin Does Not Match Confirm MPin</string>
+    <string name="error_zero_amount">Amount must be greater than Zero</string>
+    <string name="error_insufficient_balance">Insufficient Balance</string>
+    <string name="success_withdraw">Successfully Withdrawn Your Funds</string>
+
+    <string name="home_text_inr_rupees">INR - Rupees</string>
+    <string name="home_text_account_overview">Account Overview</string>
+    <string name="home_text_services">Services</string>
+
+    <string name="all_text_deposit">Deposit</string>
+    <string name="all_text_withdraw">Withdraw</string>
+    <string name="all_text_money_transfer">Money Transfer</string>
+    <string name="all_text_transaction">Transaction</string>
+
+    <string name="money_transfer_text_money_to_send">How much will you send ?</string>
+    <string name="money_transfer_text_whom_to_send">For whom is the money ?</string>
+    <string name="money_transfer_hint_amount">Enter Amount</string>
+    <string name="money_transfer_hint_account_number">Enter Account Number</string>
+    <string name="all_rupees_icon_description">Rupees Icon</string>
+    <string name="money_transfer_btn_send">Send</string>
+    <string name="err_empty_custid">Customer ID cannot be empty</string>
+    <string name="err_empty_mpin">MPIN Cannot be Empty</string>
+    <string name="address_field">Address</string>
+    <string name="err_empty_full_name">Full Name Cannot be Empty</string>
+    <string name="err_empty_mobile_number">Mobile Number Cannot be Empty</string>
+    <string name="err_empty_birth_date">BirthDate Cannot be Empty</string>
+    <string name="err_empty_address">Address Cannot be Empty</string>
+    <string name="err_empty_UID">Aadhaar Number Cannot be Empty</string>
+    <string name="err_empty_parent_name">Parent Name Cannot be Empty</string>
+    <string name="err_empty_nominee_name">Nominee Name Cannot be Empty</string>
+    <string name="err_empty_confirm_mpin">Confirm MPIN Cannot be Empty</string>
+    <string name="enter_10_digit_mobile_number">Enter 10 digit mobile number</string>
+    <string name="enter_12_digit_aadhaar_number">Enter 12 digit Aadhaar number</string>
+    <string name="enter_6_digit_mpin">Enter 6 digit MPIN</string>
+    <string name="enter_6_digit_confirm_mpin">Enter 6 digit confirm MPIN</string>
+    <string name="key_full_name">name</string>
+    <string name="key_mobile_number">mobileNumber</string>
+    <string name="key_birth_date">dob</string>
+    <string name="key_address">address</string>
+    <string name="key_UID">aadhaarNumber</string>
+    <string name="key_parent_name">parentsName</string>
+    <string name="key_nominee_name">nominee</string>
+    <string name="key_mpin">mpin</string>
+    <string name="message_register_success">Successfully Registered \nCustomer ID : %1$s</string>
+    <string name="transaction_btn_retry">Retry</string>
+    <string name="text_no_transaction_found">No Transactions Found</string>
+    <string name="error_could_not_load_data">Could Not Load Data</string>
+    <string name="all_text_dashboard">Dashboard</string>
+    <string name="all_text_logout">Logout</string>
+    <string name="message_logout_confirmation">Are you sure want to logout?</string>
+    <string name="err_session_expired">Session Expired! Login Again</string>
+    <string name="label_welcome_fragment">IntroFragment</string>
+    <string name="label_create_account_fragment">CreateAccountFragment</string>
+    <string name="label_dashboard_fragment">Dashboard</string>
+    <string name="label_withdraw_fragment">Withdraw</string>
+    <string name="label_deposit_fragment">Deposit</string>
+    <string name="label_transaction_fragment">Transaction</string>
+    <string name="label_login_fragment">LoginFragment</string>
+    <string name="label_money_transfer_fragment">Money Transfer</string>
+    <string name="label_logout_dialog">LogoutDialogFragment</string>
+
+    <string name="error_empty_acc_num">Account Number Cannot be Empty</string>
+    <string name="key_to_account_number">toAccountNumber</string>
+    <string name="key_amount">amount</string>
+    <string name="success_money_transfer">Successfully Transferred Your Money</string>
+</resources>

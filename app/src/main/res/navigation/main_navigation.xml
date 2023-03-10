@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/introFragment">
+
+    <fragment
+        android:id="@+id/introFragment"
+        android:name="com.cbsindia.cbs.ui.view.WelcomeFragment"
+        android:label="@string/label_welcome_fragment">
+        <action
+            android:id="@+id/action_introFragment_to_createAccountFragment"
+            app:destination="@id/createAccountFragment"
+            app:popUpTo="@id/introFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_introFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/introFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/createAccountFragment"
+        android:name="com.cbsindia.cbs.ui.view.CreateAccountFragment"
+        android:label="@string/label_create_account_fragment">
+        <action
+            android:id="@+id/action_createAccountFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.cbsindia.cbs.ui.view.LoginFragment"
+        android:label="@string/label_login_fragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/drawer_navigation"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_createAccountFragment"
+            app:destination="@id/createAccountFragment" />
+    </fragment>
+
+    <navigation
+        android:id="@+id/drawer_navigation"
+        app:startDestination="@id/homeFragment">
+        <fragment
+            android:id="@+id/homeFragment"
+            android:name="com.cbsindia.cbs.ui.view.DashboardFragment"
+            android:label="@string/label_dashboard_fragment">
+            <action
+                android:id="@+id/action_homeFragment_to_withdrawFragment"
+                app:destination="@id/withdrawFragment" />
+            <action
+                android:id="@+id/action_homeFragment_to_depositFragment"
+                app:destination="@id/depositFragment" />
+            <action
+                android:id="@+id/action_homeFragment_to_moneyTransferFragment"
+                app:destination="@id/moneyTransferFragment" />
+            <action
+                android:id="@+id/action_homeFragment_to_transactionFragment"
+                app:destination="@id/transactionFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/withdrawFragment"
+            android:name="com.cbsindia.cbs.ui.view.WithdrawFragment"
+            android:label="@string/label_withdraw_fragment" />
+        <fragment
+            android:id="@+id/depositFragment"
+            android:name="com.cbsindia.cbs.ui.view.DepositFragment"
+            android:label="@string/label_deposit_fragment" />
+        <fragment
+            android:id="@+id/moneyTransferFragment"
+            android:name="com.cbsindia.cbs.ui.view.MoneyTransferFragment"
+            android:label="@string/label_money_transfer_fragment"
+            tools:layout="@layout/fragment_money_transfer" />
+        <fragment
+            android:id="@+id/transactionFragment"
+            android:name="com.cbsindia.cbs.ui.view.TransactionFragment"
+            android:label="@string/label_transaction_fragment" />
+        <action
+            android:id="@+id/action_global_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/drawer_navigation"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_global_logoutDialogFragment"
+            app:destination="@id/logoutDialogFragment"
+            app:popUpToInclusive="false" />
+    </navigation>
+
+    <dialog
+        android:id="@+id/logoutDialogFragment"
+        android:name="com.cbsindia.cbs.ui.dialog.LogoutDialogFragment"
+        android:label="@string/label_logout_dialog">
+        <action
+            android:id="@+id/action_logoutDialogFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/main_navigation"
+            app:popUpToInclusive="true" />
+    </dialog>
+
+</navigation>

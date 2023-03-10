@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_dashboard"
+        android:title="@string/all_text_dashboard" />
+    <item
+        android:id="@+id/depositFragment"
+        android:icon="@drawable/ic_deposit"
+        android:title="@string/all_text_deposit" />
+    <item
+        android:id="@+id/withdrawFragment"
+        android:icon="@drawable/ic_currency_rupee"
+        android:title="@string/all_text_withdraw" />
+    <item
+        android:id="@+id/moneyTransferFragment"
+        android:icon="@drawable/ic_transfer"
+        android:title="@string/all_text_money_transfer" />
+    <item
+        android:id="@+id/transactionFragment"
+        android:icon="@drawable/ic_statement"
+        android:title="@string/all_text_transaction" />
+    <group android:id="@+id/userAction">
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/all_text_logout" />
+    </group>
+</menu>

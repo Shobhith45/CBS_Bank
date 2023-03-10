@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_lilac">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="@dimen/dimen_8"
+        app:layout_constraintBottom_toTopOf="@id/fab_withdraw"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/view_balance_background"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="@dimen/dimen_0"
+                android:layout_marginHorizontal="@dimen/dimen_16"
+                android:layout_marginVertical="@dimen/dimen_16"
+                android:background="@drawable/rounded_corner_background"
+                app:layout_constraintBottom_toBottomOf="@id/barrier_balance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_balance_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_32"
+                android:fontFamily="@font/gilroy_regular"
+                android:text="@string/all_text_available_balance"
+                android:textColor="@color/light_grey"
+                android:textSize="@dimen/text_16"
+                app:layout_constraintEnd_toEndOf="@id/view_balance_background"
+                app:layout_constraintStart_toStartOf="@id/view_balance_background"
+                app:layout_constraintTop_toTopOf="@id/view_balance_background" />
+
+            <TextView
+                android:id="@+id/tv_available_balance"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_8"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:layout_marginBottom="@dimen/dimen_32"
+                android:fontFamily="@font/gilroy_semi_bold"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_24"
+                app:layout_constraintBottom_toBottomOf="@id/view_balance_background"
+                app:layout_constraintEnd_toEndOf="@id/view_balance_background"
+                app:layout_constraintStart_toStartOf="@id/view_balance_background"
+                app:layout_constraintTop_toBottomOf="@id/tv_balance_description" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="tv_balance_description,tv_available_balance" />
+
+            <TextView
+                android:id="@+id/tv_withdraw_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_16"
+                android:layout_marginTop="@dimen/dimen_16"
+                android:fontFamily="@font/gilroy_semi_bold"
+                android:text="@string/all_text_withdraw"
+                android:labelFor="@id/et_withdraw_balance"
+                app:layout_constraintBottom_toTopOf="@id/et_withdraw_balance"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_balance_background"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <EditText
+                android:id="@+id/et_withdraw_balance"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_16"
+                android:autofillHints=""
+                android:background="@drawable/et_background"
+                android:drawableStart="@drawable/ic_currency_rupee"
+                android:fontFamily="@font/gilroy_semi_bold"
+                android:inputType="numberDecimal"
+                android:letterSpacing="0.1"
+                android:maxLength="8"
+                android:padding="@dimen/dimen_16"
+                android:textColor="@color/blue"
+                android:textColorHint="@color/blue"
+                android:textSize="@dimen/text_24"
+                app:drawableTint="@color/blue"
+                app:layout_constraintBottom_toTopOf="@id/tv_mpin_heading"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_withdraw_heading" />
+
+            <TextView
+                android:id="@+id/tv_mpin_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:fontFamily="@font/gilroy_semi_bold"
+                android:text="@string/all_text_mpin"
+                app:layout_constraintBottom_toTopOf="@id/et_mpin"
+                app:layout_constraintStart_toStartOf="@id/et_mpin"
+                app:layout_constraintTop_toBottomOf="@id/et_withdraw_balance" />
+
+            <com.cbsindia.cbs.ui.view.PinEntryEditText
+                android:id="@+id/et_mpin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_16"
+                android:fontFamily="@font/gilroy_semi_bold"
+                android:maxLength="6"
+                android:inputType="number"
+                android:imeOptions="actionDone"
+                android:textSize="@dimen/text_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_mpin_heading" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_withdraw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_24"
+        app:backgroundTint="@color/blue"
+        android:contentDescription="@string/withdraw_fab_description"
+        android:src="@drawable/ic_baseline_check"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/white" />
+
+    <ProgressBar
+        android:id="@+id/progress_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

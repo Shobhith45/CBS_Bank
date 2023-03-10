@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    tools:context=".ui.view.CreateAccountFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/dimen_24" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/dimen_24" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="@dimen/dimen_24" />
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_24"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/create_account_title"
+            android:src="@drawable/create_account"
+            app:layout_constraintEnd_toStartOf="@id/guideline_3"
+            app:layout_constraintStart_toStartOf="@id/guideline_2"
+            app:layout_constraintTop_toTopOf="@id/guideline_4" />
+
+        <TextView
+            android:id="@+id/text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_32"
+            android:fontFamily="@font/gilroy_semi_bold"
+            android:text="@string/create_account_title"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_24"
+            app:layout_constraintStart_toStartOf="@id/guideline_2"
+            app:layout_constraintTop_toBottomOf="@id/image_view" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tt_1"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:focusableInTouchMode="true"
+            android:hint="@string/create_account_hint_full_name"
+            android:textColorHint="@color/light_grey"
+            app:boxStrokeColor="@color/black"
+            app:hintTextColor="@color/light_grey"
+            app:layout_constraintStart_toStartOf="@id/guideline_2"
+            app:layout_constraintEnd_toStartOf="@id/guideline_3"
+            app:layout_constraintTop_toBottomOf="@id/text_view">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_full_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:fontFamily="@font/gilroy_regular"
+                android:paddingHorizontal="@dimen/dimen_0"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_16"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tt_2"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:focusableInTouchMode="true"
+            android:hint="@string/create_account_hint_mobile_number"
+            android:textColorHint="@color/light_grey"
+            app:boxStrokeColor="@color/black"
+            app:hintTextColor="@color/light_grey"
+            app:layout_constraintEnd_toEndOf="@id/tt_1"
+            app:layout_constraintStart_toStartOf="@id/tt_1"
+            app:layout_constraintTop_toBottomOf="@id/tt_1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_mobile_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:fontFamily="@font/gilroy_regular"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingHorizontal="@dimen/dimen_0"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_16"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tt_3"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:focusableInTouchMode="true"
+            android:hint="@string/create_account_hint_aadhaar_number"
+            android:textColorHint="@color/light_grey"
+            app:boxStrokeColor="@color/black"
+            app:hintTextColor="@color/light_grey"
+            app:layout_constraintEnd_toEndOf="@id/tt_2"
+            app:layout_constraintStart_toStartOf="@id/tt_2"
+            app:layout_constraintTop_toBottomOf="@id/tt_2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_aadhar_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:fontFamily="@font/gilroy_regular"
+                android:inputType="number"
+                android:maxLength="12"
+                android:paddingHorizontal="@dimen/dimen_0"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_16"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tt_4"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:focusableInTouchMode="true"
+            android:hint="@string/create_account_hint_birth_date"
+            android:textColorHint="@color/light_grey"
+            app:boxStrokeColor="@color/black"
+            app:hintTextColor="@color/light_grey"
+            app:layout_constraintEnd_toEndOf="@id/tt_3"
+            app:layout_constraintStart_toStartOf="@id/tt_3"
+            app:layout_constraintTop_toBottomOf="@id/tt_3">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_birthdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:fontFamily="@font/gilroy_regular"
+                android:paddingHorizontal="@dimen/dimen_0"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_16"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tt"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:focusableInTouchMode="true"
+            android:hint="@string/address_field"
+            android:textColorHint="@color/light_grey"
+            app:boxStrokeColor="@color/black"
+            app:hintTextColor="@color/light_grey"
+            app:layout_constraintEnd_toEndOf="@id/tt_4"
+            app:layout_constraintStart_toStartOf="@id/tt_4"
+            app:layout_constraintTop_toBottomOf="@id/tt_4">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:fontFamily="@font/gilroy_regular"
+                android:paddingHorizontal="@dimen/dimen_0"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_16"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tt_5"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:focusableInTouchMode="true"
+            android:hint="@string/create_account_hint_parent_name"
+            android:textColorHint="@color/light_grey"
+            app:boxStrokeColor="@color/black"
+            app:hintTextColor="@color/light_grey"
+            app:layout_constraintEnd_toEndOf="@id/tt"
+            app:layout_constraintStart_toStartOf="@id/tt"
+            app:layout_constraintTop_toBottomOf="@id/tt">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_parent_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:fontFamily="@font/gilroy_regular"
+                android:paddingHorizontal="@dimen/dimen_0"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_16"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tt_6"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:focusableInTouchMode="true"
+            android:hint="@string/create_account_hint_nominee"
+            android:textColorHint="@color/light_grey"
+            app:boxStrokeColor="@color/black"
+            app:hintTextColor="@color/light_grey"
+            app:layout_constraintEnd_toEndOf="@id/tt_5"
+            app:layout_constraintStart_toStartOf="@id/tt_5"
+            app:layout_constraintTop_toBottomOf="@id/tt_5">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_nominee_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:fontFamily="@font/gilroy_regular"
+                android:paddingHorizontal="@dimen/dimen_0"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_16"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tt_7"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:focusableInTouchMode="true"
+            android:hint="@string/all_text_mpin"
+            android:textColorHint="@color/light_grey"
+            app:boxStrokeColor="@color/black"
+            app:hintTextColor="@color/light_grey"
+            app:layout_constraintEnd_toEndOf="@id/tt_6"
+            app:layout_constraintStart_toStartOf="@id/tt_6"
+            app:layout_constraintTop_toBottomOf="@id/tt_6">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_mpin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:fontFamily="@font/gilroy_regular"
+                android:inputType="numberPassword"
+                android:maxLength="6"
+                android:paddingHorizontal="@dimen/dimen_0"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_16"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tt_8"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:focusableInTouchMode="true"
+            android:hint="@string/create_account_hint_confirm_mpin"
+            android:textColorHint="@color/light_grey"
+            app:boxStrokeColor="@color/black"
+            app:hintTextColor="@color/light_grey"
+            app:layout_constraintEnd_toEndOf="@id/tt_7"
+            app:layout_constraintStart_toStartOf="@id/tt_7"
+            app:layout_constraintTop_toBottomOf="@id/tt_7">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_confirm_mpin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:fontFamily="@font/gilroy_regular"
+                android:inputType="numberPassword"
+                android:maxLength="6"
+                android:paddingHorizontal="@dimen/dimen_0"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_16"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_create_account"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_40"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="@string/create_account_btn_create"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/tt_8"
+            app:layout_constraintStart_toStartOf="@id/tt_8"
+            app:layout_constraintTop_toBottomOf="@id/tt_8" />
+        <ProgressBar
+            android:id="@+id/progress_circular"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

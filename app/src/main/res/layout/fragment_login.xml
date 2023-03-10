@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:layout_marginBottom="@dimen/dimen_8"
+    android:background="@color/white"
+    tools:context=".ui.view.LoginFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/dimen_24" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/dimen_24" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="@dimen/dimen_24" />
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_24"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/login_title"
+            android:src="@drawable/login"
+            app:layout_constraintEnd_toStartOf="@id/guideline_3"
+            app:layout_constraintStart_toStartOf="@id/guideline_2"
+            app:layout_constraintTop_toTopOf="@id/guideline_4" />
+
+        <TextView
+            android:id="@+id/text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_32"
+            android:fontFamily="@font/gilroy_semi_bold"
+            android:text="@string/login_title"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_24"
+            app:layout_constraintStart_toStartOf="@id/guideline_2"
+            app:layout_constraintTop_toBottomOf="@id/image_view" />
+
+        <TextView
+            android:id="@+id/tv_customer_id_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen_16"
+            android:fontFamily="@font/gilroy_semi_bold"
+            android:text="@string/login_hint_customer_id"
+            android:labelFor="@id/et_customer_id"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@id/guideline_2"
+            app:layout_constraintTop_toBottomOf="@id/text_view" />
+
+        <EditText
+            android:id="@+id/et_customer_id"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:background="@drawable/et_background"
+            android:fontFamily="@font/gilroy_semi_bold"
+            android:inputType="number"
+            android:padding="@dimen/dimen_16"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/text_24"
+            app:layout_constraintEnd_toStartOf="@id/guideline_3"
+            app:layout_constraintStart_toStartOf="@id/guideline_2"
+            app:layout_constraintTop_toBottomOf="@id/tv_customer_id_heading"
+            android:autofillHints="" />
+
+        <TextView
+            android:id="@+id/tv_mpin_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen_16"
+            android:fontFamily="@font/gilroy_semi_bold"
+            android:text="@string/all_text_mpin"
+            app:layout_constraintStart_toStartOf="@id/guideline_2"
+            app:layout_constraintTop_toBottomOf="@id/et_customer_id" />
+
+        <com.cbsindia.cbs.ui.view.PinEntryEditText
+            android:id="@+id/et_mpin"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen_16"
+            android:cursorVisible="true"
+            android:fontFamily="@font/gilroy_semi_bold"
+            android:imeOptions="actionDone"
+            android:inputType="numberPassword"
+            android:maxLength="6"
+            android:maxLines="1"
+            android:textSize="@dimen/text_24"
+            app:layout_constraintEnd_toEndOf="@id/guideline_3"
+            app:layout_constraintStart_toStartOf="@id/guideline_2"
+            app:layout_constraintTop_toBottomOf="@id/tv_mpin_heading" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_login"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_32"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="@string/all_text_login"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_16"
+            app:layout_constraintEnd_toEndOf="@id/guideline_3"
+            app:layout_constraintStart_toStartOf="@id/guideline_2"
+            app:layout_constraintTop_toBottomOf="@id/et_mpin" />
+
+        <TextView
+            android:id="@+id/text_view_2"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:layout_marginEnd="@dimen/dimen_4"
+            android:gravity="end"
+            android:text="@string/login_need_account"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_16"
+            app:layout_constraintEnd_toStartOf="@id/tv_create_account"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@id/guideline_2"
+            app:layout_constraintTop_toBottomOf="@id/bt_login" />
+
+        <TextView
+            android:id="@+id/tv_create_account"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_4"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:layout_marginEnd="@dimen/dimen_16"
+            android:text="@string/login_create_account"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/text_16"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/text_view_2"
+            app:layout_constraintEnd_toStartOf="@id/guideline_3"
+            app:layout_constraintStart_toEndOf="@id/text_view_2"
+            app:layout_constraintTop_toBottomOf="@id/bt_login" />
+
+        <ProgressBar
+            android:id="@+id/progress_circular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
